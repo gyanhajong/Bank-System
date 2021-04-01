@@ -3,7 +3,7 @@ import { AccountService } from './account.service';
 import { IAccount } from './interface/account.interface';
 
 @Controller('accounts')
-export class UsersController {
+export class AccountsController {
   constructor(private accountService: AccountService) { }
   @Post('register')  
     public async register(@Body() account: IAccount): Promise<any> {    
