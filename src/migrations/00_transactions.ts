@@ -16,13 +16,19 @@ export async function up(i: any) {
         type: Sequelize.INTEGER,
         references: {
           model: 'Accounts',
-          key: 'id',
+          key: 'AccId',
         },
     },
     Amount: {
       type: Sequelize.INTEGER,
       allowNull: false,
     },
+    createdAt: {
+      type: Sequelize.DATE,
+    },
+    updatedAt: {
+      type: Sequelize.DATE,
+    }
   });
 };
 
