@@ -1,4 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
+import { Accounts } from '../account/accounts.entity';
+import { Transactions } from '../transactions/transactions.entity';
 
 /*
     Create and export sequelize instance that helps to connect to database
@@ -16,7 +18,7 @@ export const databaseProvider = [
             password: process.env.DB_PASS,
             database: process.env.DB_NAME,
         });
-        sequelize.addModels([]);
+        sequelize.addModels([Accounts, Transactions]);
         return sequelize;
         }
   }
