@@ -1,6 +1,7 @@
 import { Table, Column, Model, DataType, CreatedAt, UpdatedAt, HasMany } from 'sequelize-typescript';
 import { TableOptions } from 'sequelize-typescript';
 import * as EmailValidator from 'email-validator';
+import { Transactions } from '../transactions/transactions.entity';
 
 
 const tableOptions: TableOptions = { timestamp: false, tableName: 'accounts' } as TableOptions;
@@ -53,4 +54,6 @@ export class Accounts extends Model<Accounts> {
     allowNull: true,
   })
   public Salt: string;
+  @HasMany(() => Transactions, 'AccId')
+  public transactions: Transactions[];
 }
