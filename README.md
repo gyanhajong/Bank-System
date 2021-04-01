@@ -1,6 +1,5 @@
-
 ## Description
-
+Building a banking system where the users can track their account details and transactions.
 
 ## Installation
 
