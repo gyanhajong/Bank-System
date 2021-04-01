@@ -53,8 +53,4 @@ export class Accounts extends Model<Accounts> {
     allowNull: true,
   })
   public Salt: string;
-  @CreatedAt
-  public createdAt: Date;
-  @UpdatedAt
-  public updatedAt: Date;
 }
